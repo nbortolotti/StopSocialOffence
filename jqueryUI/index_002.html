@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>Scrolling</title>
+		<link rel="stylesheet" href="static/css/style_002.css" type="text/css" media="screen" />
+		
+		<link href='http://fonts.googleapis.com/css?family=Fjord+One' rel='stylesheet' type='text/css'>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+
+		<script type="text/javascript" src="static/js/zoomooz/jquery.zoomooz-helpers.js"></script>
+		<script type="text/javascript" src="static/js/zoomooz/jquery.zoomooz-anim.js"></script>
+		<script type="text/javascript" src="static/js/zoomooz/jquery.zoomooz-core.js"></script>
+		<script type="text/javascript" src="static/js/zoomooz/purecssmatrix.js"></script>
+		<script type="text/javascript" src="static/js/zoomooz/sylvester.src.stripped.js"></script>
+		<script type="text/javascript" src="static/js/zoomooz/jquery.zoomooz-zoomTarget.js"></script>
+		<script type="text/javascript" src="static/js/zoomooz/jquery.zoomooz-zoomContainer.js"></script>
+
+	</head>
+	<body>
+    <div id="viewport" class="zoomViewport">
+
+            {% for c,v in analisis.iteritems() %}
+               {% if v == True %}
+                    <div id="content" class="zoomContainer">
+                        <div id={{c|join("normal")}} class="zoomTarget level1">{{c}}
+                            <br>
+                             <img src="static/images/a.png" alt="libre" style="width:48px;height:48px"> {{v}}
+                        </div>
+                    </div>
+               {% else %}
+                     <div id="contentoffence" class="zoomContainerOffence">
+                        <div id={{c|join("off")}} class="zoomTarget level1">{{c}}
+                            <br>
+                            <img src="static/images/b.png" alt="block" style="width:48px;height:48px">{{v}}
+                        </div>
+                    </div>
+               {% endif %}
+
+            {% endfor %}
+
+
+    </div>
+	</body>
+
+</html>

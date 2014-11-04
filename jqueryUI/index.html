@@ -1,0 +1,21 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<title>jquery and Zoomooz</title>
+		<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+		<script type="text/javascript" src="static/js/zoomooz/jquery.zoomooz.min.js"></script>
+		
+	</head>
+	<body class="zoomContainer">
+		<div id="a" class="zoomTarget level0">
+
+        {% for a in actividades['items'] %}
+            <div id=a['id'] class="zoomTarget level1">{{a['title']}}</div>
+        {% endfor %}
+
+		</div>
+	</body>
+
+</html>
