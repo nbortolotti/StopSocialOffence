@@ -28,7 +28,7 @@ decorator = OAuth2DecoratorFromClientSecrets(os.path.join(os.path.dirname(__file
 servicio = build('plus', 'v1')
 
 #Variables del proyecto
-proyecto = 'socialagilelearning'
+proyecto = 'project'
 
 #Entorno Jinja para trabajar plantillas y el HTML
 Entorno_Jinja = jinja2.Environment(
@@ -37,9 +37,9 @@ Entorno_Jinja = jinja2.Environment(
     autoescape=True)
 
 # Global variables Prediction
-archivo = "stop_social_offence/examples_1.txt"
-nombre_modelo = "social_offence"
-api_key = "AIzaSyBr_7eJzZQCeBUVqHuOyRPw5uJHf8PRG8c"
+archivo = "stop_social_offence/prediction_file"
+nombre_modelo = "prediction_model"
+api_key = "api_key"
 
 # Set up the Prediction API service
 credentials = AppAssertionCredentials(scope='https://www.googleapis.com/auth/prediction')
